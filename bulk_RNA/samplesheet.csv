@@ -1,3 +1,0 @@
-sample,fastq_1,fastq_2,strandedness
-sample1,/gpfs/commons/home/jameslee/Cas13/bulk_RNA/fastq/sample1_R1.fastq.gz,/gpfs/commons/home/jameslee/Cas13/bulk_RNA/fastq/sample1_R2.fastq.gz,auto
-sample2,/gpfs/commons/home/jameslee/Cas13/bulk_RNA/fastq/sample2_R1.fastq.gz,/gpfs/commons/home/jameslee/Cas13/bulk_RNA/fastq/sample2_R2.fastq.gz,auto
