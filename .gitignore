@@ -49,4 +49,14 @@ Thumbs.db
 # Exceptions - keep these CSV/metadata files even if small
 !samplesheet.csv
 !**/metadata/*.csv
-!**/metadata/*.tsv 
+!**/metadata/*.tsv
+
+# Keep configuration and code files regardless of location
+!*.nf
+!nextflow.config
+!*.R
+!*.py
+!*.sh
+!*.md
+!*.yml
+!*.yaml 
