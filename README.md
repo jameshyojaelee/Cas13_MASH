@@ -1,4 +1,4 @@
-# Cas13 Project Documentation
+# Cas13 MASH Project Documentation
 
 This repository contains scripts and data for analyzing bulk RNA-seq, single-cell RNA-seq, and GWAS data related to liver diseases and Cas13 experiments.
 
