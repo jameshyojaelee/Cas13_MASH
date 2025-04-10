@@ -24,17 +24,28 @@ process STAR_ALIGN {
             --runThreadN ${task.cpus}
         """
     def index_path = star_index ?: "star_index"
+    def is_gzipped = read1.getName().endsWith('.gz') ? true : false
+    def read_command = is_gzipped ? "--readFilesCommand zcat" : ""
+    
+    // Get additional arguments if specified in nextflow.config
+    def args = task.ext.args ?: ''
+    
     """
     ${index_cmd}
+    
+    echo "Input files: ${read1} ${read2}"
+    echo "Is gzipped: ${is_gzipped}"
+    echo "Read command: ${read_command}"
     
     STAR --genomeDir ${index_path} \
         --readFilesIn ${read1} ${read2} \
         --runThreadN ${task.cpus} \
         --outFileNamePrefix ${sample} \
         --outSAMtype BAM SortedByCoordinate \
-        --readFilesCommand zcat \
+        ${read_command} \
         --outSAMunmapped Within \
         --outSAMattributes Standard \
-        --quantMode GeneCounts
+        --quantMode GeneCounts \
+        ${args}
     """
 } 
