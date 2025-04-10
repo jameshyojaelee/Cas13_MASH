@@ -19,11 +19,13 @@
 *.tsv
 *.mtx
 *.serialized
+*.sqlite
+*.sqlite.gz
 
 # Folders containing large data
 **/fastq/
 **/alignment/
-**/NAFLD_NASH_RNAseq/
+**/NAFLD_NASH_RNAseq/raw_data
 **/data/
 **/results/
 
