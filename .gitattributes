@@ -1,0 +1,26 @@
+# Set Nextflow files to be detected as Groovy
+*.nf linguist-language=Nextflow
+nextflow.config linguist-language=Nextflow
+
+# R files
+*.R linguist-language=R
+
+# Python files
+*.py linguist-language=Python
+
+# Shell scripts
+*.sh linguist-language=Shell
+
+# Set Jupyter Notebooks
+*.ipynb linguist-language=Jupyter Notebook
+
+# Prevent vendored code from affecting language statistics
+**/vendor/** linguist-vendored
+
+# Make sure GitHub correctly detects documentation
+*.md linguist-documentation
+*.txt linguist-documentation
+
+# Explicitly mark data files
+*.csv linguist-generated
+*.tsv linguist-generated 
