@@ -25,7 +25,7 @@
 # Folders containing large data
 **/fastq/
 **/alignment/
-**/RNAseq_data
+**/RNAseq_data/
 **/data/
 **/results/
 
