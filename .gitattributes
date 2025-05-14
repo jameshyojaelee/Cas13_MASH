@@ -28,3 +28,5 @@ nextflow.config linguist-language=Nextflow
 # Log files
 *.log linguist-generated
 *.log.* linguist-generated 
+
+*.1 linguist-language=text
