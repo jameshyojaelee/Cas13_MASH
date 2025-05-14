@@ -23,4 +23,8 @@ nextflow.config linguist-language=Nextflow
 
 # Explicitly mark data files
 *.csv linguist-generated
-*.tsv linguist-generated 
+*.tsv linguist-generated
+
+# Log files
+*.log linguist-generated
+*.log.* linguist-generated 
