@@ -98,23 +98,19 @@ This directory contains the bulk RNA-seq data for the Cas13 experiments. The dat
 - `README.md`: this file
 
 ### Data description
-  "GSE135251", # Liu et al. (2020) - 206 snap-frozen biopsy samples from 206 patients diagnosed with NAFLD in France, Germany, Italy, and the UK and enrolled in the European NAFLD Registry
-  Patient samples were grouped: NAFL (n = 51) and NASH with fibrosis stages of F0/1 (n = 34), F2 (n = 53), F3 (n = 54) and F4 (n = 14)
-  - NAFLD https://www.science.org/doi/10.1126/scitranslmed.aba4448?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed
-  - NASH limits anti-tumor surveillance in HCC https://www.nature.com/articles/s41586-021-03362-0
-  - Steatohepatits https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00591-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379124005913%3Fshowall%3Dtrue
-  - **Dataset Details:** This study includes 217 RNA-Seq samples obtained using Illumina NextSeq 500 (Paired-end).
-    - **Cohort:** Samples are from patients with NAFLD (including NAFL and NASH at various fibrosis stages F0-F4) and control individuals.
-    - **Key Metadata:** `disease`, `Fibrosis_stage`, `group_in_paper` (original study grouping), `nas_score` (NAFLD Activity Score), `Stage`.
 
-  "GSE130970", # Suppli et al. (2019) - liver biopsies obtained from healthy normal weight (n=14) and obese (n=12) individuals, NAFL (n=15) and NASH (n=16) patients
-  - Transcriptomic Profiling Across NAFLD Spectrum - https://journals.physiology.org/doi/full/10.1152/ajpgi.00358.2018?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org 
-  - **Dataset Details:** This study includes 79 RNA-Seq samples obtained using Illumina HiSeq 2500 (Paired-end).
-    - **Cohort:** Samples are from healthy normal-weight individuals, obese individuals, NAFL patients, and NASH patients.
-    - **Key Metadata:** `age_at_biopsy`, `sex`, `fibrosis_stage`, `lobular_inflammation_grade`, `nafld_activity_score`, `steatosis_grade`, `cytological_ballooning_grade`.
-  
-  "GSE126848", # Hoang SA et al. (2019) - This dataset contains transcriptomic profiles of 78 distinct human liver biopsies. Of these, 6 are histologically normal, and 72 cover the full spectrum of nonalcoholic fatty liver disease
-  - Transcriptomic Profiling of Human Liver Biopsies - https://www.nature.com/articles/s41598-019-48746-5 
+Below is a summary of the primary bulk RNA-seq datasets used in this project:
+
+| GEO Accession                                     | Publication                                                                                                                               | Cohort Description                                                                                                                                                                                             | # Samples | Sequencing Platform | Key Metadata Available (from SRA & samplesheet)                                                                                                                                                              |
+| :------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- | :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GSE135251**                                     | Liu et al. (2020) <br> [*Sci Transl Med*](https://www.science.org/doi/10.1126/scitranslmed.aba4448)                                       | 206 snap-frozen biopsy samples from 206 patients diagnosed with NAFLD in Europe. <br> Groups: NAFL (n=51), NASH F0/1 (n=34), NASH F2 (n=53), NASH F3 (n=54), NASH F4 (n=14). Originally 217 samples in SRA. | 206 (217 in SRA) | Illumina NextSeq 500 (Paired-end) | `disease`, `Fibrosis_stage`, `group_in_paper`, `nas_score`, `Stage`, `AvgSpotLen`, `Bases`, `BioSample`, `Bytes`, `Experiment`, `Instrument`, `LibraryLayout`, `LibrarySelection`, `LibrarySource`, `Organism`, `Platform`, `Sample Name`, `SRA Study` |
+| **GSE130970**                                     | Suppli et al. (2019) <br> [*Am J Physiol Gastrointest Liver Physiol*](https://journals.physiology.org/doi/full/10.1152/ajpgi.00358.2018) | Liver biopsies from healthy normal weight (n=14), obese (n=12), NAFL (n=15), and NASH (n=16) patients. Originally 79 samples in SRA.                                                                         | 57 (79 in SRA)  | Illumina HiSeq 2500 (Paired-end)  | `age_at_biopsy`, `sex`, `fibrosis_stage`, `lobular_inflammation_grade`, `nafld_activity_score`, `steatosis_grade`, `cytological_ballooning_grade`, `AvgSpotLen`, `Bases`, `BioSample`, `Bytes`, `Experiment`, `Instrument`, `LibraryLayout`, `LibrarySelection`, `LibrarySource`, `Organism`, `Platform`, `Sample Name`, `SRA Study` |
+| **GSE126848**                                     | Hoang SA et al. (2019) <br> [*Sci Rep*](https://www.nature.com/articles/s41598-019-48746-5)                                                   | 78 distinct human liver biopsies: 6 histologically normal, 72 covering the full spectrum of NAFLD.                                                                                                          | 78        | Illumina HiSeq (Paired-end, based on SRA)         | (Details to be added if SRA table is provided)                                                                                                                                                               |
+
+Additional Links:
+- General NAFLD: [Science Translational Medicine](https://www.science.org/doi/10.1126/scitranslmed.aba4448?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)
+- NASH and HCC: [Nature](https://www.nature.com/articles/s41586-021-03362-0)
+- Steatohepatitis: [Cell Reports Medicine](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00591-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379124005913%3Fshowall%3Dtrue)
 
 ### Data processing with nf-core/rnaseq pipeline
 
