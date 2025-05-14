@@ -28,6 +28,12 @@
 **/RNAseq_data/
 **/data/
 **/results/
+**/bulk_RNA/RNAseq_results_GSE135251/
+**/bulk_RNA/RNAseq_results_GSE130970/
+**/bulk_RNA/RNAseq_nextflow_GSE130970/work
+**/bulk_RNA/RNAseq_nextflow_GSE130970/.nextflow
+
+
 
 # Python/R environment and cache files
 __pycache__/

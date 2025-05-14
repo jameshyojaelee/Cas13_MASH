@@ -39,11 +39,14 @@ workflow {
         .splitCsv(header: true)
         .map { row -> 
             def sample_id = row.sample
-            def group = row.group_in_paper
-            def disease = row.disease
-            def fibrosis = row.Fibrosis_stage
-            def nas = row.nas_score
-            def stage = row.Stage
+            // Use fibrosis_stage as the group for comparison
+            def group = row.fibrosis_stage 
+            // Use NAFLD as the default disease
+            def disease = "NAFLD"  
+            def fibrosis = row.fibrosis_stage
+            def nas = row.nafld_activity_score
+            // Combine steatosis grade and lobular inflammation as stage info
+            def stage = "S${row.steatosis_grade}_L${row.lobular_inflammation_grade}"
             def r1 = file(row.fastq_1)
             def r2 = file(row.fastq_2)
             return [sample_id, group, disease, fibrosis, nas, stage, r1, r2]
