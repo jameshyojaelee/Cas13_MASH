@@ -103,9 +103,15 @@ This directory contains the bulk RNA-seq data for the Cas13 experiments. The dat
   - NAFLD https://www.science.org/doi/10.1126/scitranslmed.aba4448?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed
   - NASH limits anti-tumor surveillance in HCC https://www.nature.com/articles/s41586-021-03362-0
   - Steatohepatits https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(24)00591-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379124005913%3Fshowall%3Dtrue
+  - **Dataset Details:** This study includes 217 RNA-Seq samples obtained using Illumina NextSeq 500 (Paired-end).
+    - **Cohort:** Samples are from patients with NAFLD (including NAFL and NASH at various fibrosis stages F0-F4) and control individuals.
+    - **Key Metadata:** `disease`, `Fibrosis_stage`, `group_in_paper` (original study grouping), `nas_score` (NAFLD Activity Score), `Stage`.
 
   "GSE130970", # Suppli et al. (2019) - liver biopsies obtained from healthy normal weight (n=14) and obese (n=12) individuals, NAFL (n=15) and NASH (n=16) patients
   - Transcriptomic Profiling Across NAFLD Spectrum - https://journals.physiology.org/doi/full/10.1152/ajpgi.00358.2018?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org 
+  - **Dataset Details:** This study includes 79 RNA-Seq samples obtained using Illumina HiSeq 2500 (Paired-end).
+    - **Cohort:** Samples are from healthy normal-weight individuals, obese individuals, NAFL patients, and NASH patients.
+    - **Key Metadata:** `age_at_biopsy`, `sex`, `fibrosis_stage`, `lobular_inflammation_grade`, `nafld_activity_score`, `steatosis_grade`, `cytological_ballooning_grade`.
   
   "GSE126848", # Hoang SA et al. (2019) - This dataset contains transcriptomic profiles of 78 distinct human liver biopsies. Of these, 6 are histologically normal, and 72 cover the full spectrum of nonalcoholic fatty liver disease
   - Transcriptomic Profiling of Human Liver Biopsies - https://www.nature.com/articles/s41598-019-48746-5 
